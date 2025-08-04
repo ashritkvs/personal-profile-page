@@ -96,15 +96,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <Button 
-            className="bg-[hsl(141,79%,40%)] hover:bg-green-600 text-black font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
-            data-testid="button-resume"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            View Resume
-          </Button>
-          <Button 
             variant="outline"
             className="border-2 border-[hsl(141,79%,40%)] text-[hsl(141,79%,40%)] hover:bg-[hsl(141,79%,40%)] hover:text-black font-bold px-8 py-4 rounded-full transition-all duration-300"
+            onClick={() => window.open('https://github.com/ashritkvs', '_blank')}
             data-testid="button-github"
           >
             <Github className="w-4 h-4 mr-2" />
@@ -113,6 +107,7 @@ export default function HeroSection() {
           <Button 
             variant="outline"
             className="border-2 border-[hsl(45,93%,54%)] text-[hsl(45,93%,54%)] hover:bg-[hsl(45,93%,54%)] hover:text-black font-bold px-8 py-4 rounded-full transition-all duration-300"
+            onClick={() => window.open('https://www.linkedin.com/in/ashritkommireddy/', '_blank')}
             data-testid="button-linkedin"
           >
             <Linkedin className="w-4 h-4 mr-2" />

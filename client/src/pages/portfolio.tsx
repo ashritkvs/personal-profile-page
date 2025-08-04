@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import HeroSection from "@/components/hero-section";
 import EducationSection from "@/components/education-section";
 import ExperienceSection from "@/components/experience-section";
+import AchievementsSection from "@/components/achievements-section";
 import ProjectsSection from "@/components/projects-section";
 import SkillsSection from "@/components/skills-section";
 import StatsSection from "@/components/stats-section";
@@ -19,6 +20,7 @@ export default function Portfolio() {
       <HeroSection />
       <EducationSection />
       <ExperienceSection />
+      <AchievementsSection />
       <ProjectsSection />
       <SkillsSection />
       <StatsSection />

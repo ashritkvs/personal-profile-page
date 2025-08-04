@@ -42,15 +42,9 @@ export default function FooterSection() {
           viewport={{ once: true }}
         >
           <Button 
-            className="bg-[hsl(141,79%,40%)] hover:bg-green-600 text-black font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105"
-            data-testid="footer-button-resume"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download Resume
-          </Button>
-          <Button 
             variant="outline"
             className="border-2 border-[hsl(45,93%,54%)] text-[hsl(45,93%,54%)] hover:bg-[hsl(45,93%,54%)] hover:text-black font-bold px-8 py-4 rounded-full transition-all duration-300"
+            onClick={() => window.open('mailto:ashritkvs@gmail.com', '_blank')}
             data-testid="footer-button-email"
           >
             <Mail className="w-4 h-4 mr-2" />
@@ -59,6 +53,7 @@ export default function FooterSection() {
           <Button 
             variant="outline"
             className="border-2 border-[hsl(250,68%,65%)] text-[hsl(250,68%,65%)] hover:bg-[hsl(250,68%,65%)] hover:text-white font-bold px-8 py-4 rounded-full transition-all duration-300"
+            onClick={() => window.open('https://github.com/ashritkvs', '_blank')}
             data-testid="footer-button-github"
           >
             <Github className="w-4 h-4 mr-2" />
@@ -83,21 +78,25 @@ export default function FooterSection() {
             </div>
             <div className="flex gap-6">
               <a 
-                href="#" 
+                href="https://github.com/ashritkvs" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[hsl(141,79%,40%)] hover:text-green-400 text-2xl transition-colors"
                 data-testid="footer-social-github"
               >
                 <Github />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/ashritkommireddy/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[hsl(45,93%,54%)] hover:text-yellow-400 text-2xl transition-colors"
                 data-testid="footer-social-linkedin"
               >
                 <Linkedin />
               </a>
               <a 
-                href="#" 
+                href="mailto:ashritkvs@gmail.com" 
                 className="text-[hsl(250,68%,65%)] hover:text-purple-400 text-2xl transition-colors"
                 data-testid="footer-social-email"
               >

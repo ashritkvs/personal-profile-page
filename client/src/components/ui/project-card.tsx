@@ -12,6 +12,8 @@ interface Project {
   genres: string[];
   synopsis: string;
   gradient: string;
+  githubUrl: string;
+  imageUrl: string;
 }
 
 interface ProjectCardProps {
@@ -36,8 +38,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       data-testid={`project-card-${index}`}
     >
       {/* Movie poster style background */}
-      <div className={`h-2/3 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="h-2/3 relative overflow-hidden">
+        <img 
+          src={project.imageUrl} 
+          alt={project.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60`}></div>
         <div className="absolute top-4 right-4">
           <div className="flex items-center gap-1 bg-black bg-opacity-70 rounded px-2 py-1">
             <Star className="w-4 h-4 text-[hsl(45,93%,54%)] fill-current" />
@@ -57,7 +65,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
       
       <div className="p-4 h-1/3">
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="flex flex-wrap gap-1 mb-2">
           {project.genres.map((genre, genreIndex) => (
             <Badge 
               key={genreIndex}
@@ -69,22 +77,34 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </Badge>
           ))}
         </div>
+        
+        <div className="mb-2">
+          <p className="text-xs text-gray-500 font-semibold mb-1">Tech Stack:</p>
+          <div className="flex flex-wrap gap-1">
+            {project.technologies.slice(0, 4).map((tech, techIndex) => (
+              <span 
+                key={techIndex}
+                className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded"
+                data-testid={`project-tech-${index}-${techIndex}`}
+              >
+                {tech}
+              </span>
+            ))}
+            {project.technologies.length > 4 && (
+              <span className="text-xs text-gray-500">+{project.technologies.length - 4}</span>
+            )}
+          </div>
+        </div>
+        
         <p className="text-xs text-gray-400 mb-3" data-testid={`project-synopsis-${index}`}>
           {project.synopsis}
         </p>
+        
         <div className="flex gap-2">
           <Button 
             size="sm"
             className="bg-[hsl(45,93%,54%)] text-black text-xs font-bold hover:bg-yellow-400"
-            data-testid={`project-demo-${index}`}
-          >
-            <ExternalLink className="w-3 h-3 mr-1" />
-            Demo
-          </Button>
-          <Button 
-            size="sm"
-            variant="outline"
-            className="border-gray-600 text-xs"
+            onClick={() => window.open(project.githubUrl, '_blank')}
             data-testid={`project-github-${index}`}
           >
             <Github className="w-3 h-3 mr-1" />

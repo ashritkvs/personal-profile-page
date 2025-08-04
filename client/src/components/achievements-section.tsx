@@ -16,7 +16,7 @@ export default function AchievementsSection() {
         "Supervised team of 30 members across various domains",
         "Optimized event management processes for enhanced collaboration"
       ],
-      description: "Led a committee that planned and executed 10 technical events each year. By implementing strategic initiatives and optimizing event management processes, I increased participant engagement by 40%. This success enhanced the committee's collaborative environment and aligned all operations with the organization's goals throughout the year."
+      description: "As President of ISTE-RAIT, I led a diverse team of over 30 student coordinators, streamlining the planning and execution of 10 major technical events over the academic year. I introduced strategic reforms in event logistics and engagement models, which resulted in a 40% increase in participation. My focus on fostering cross-team collaboration and implementing process-driven workflows significantly enhanced the society's operational efficiency and visibility within the campus."
     },
     {
       organization: "Indian Society for Technical Education (ISTE-RAIT)",
@@ -30,7 +30,7 @@ export default function AchievementsSection() {
         "Oversaw digital marketing efforts and social media campaigns",
         "Led development of promotional materials and content"
       ],
-      description: "Implemented targeted marketing strategies for technical events, leading to a 30% increase in attendance and engagement. Collaborated with committee members to ensure comprehensive coverage across social media platforms. Oversaw digital marketing efforts, including social media campaigns and online advertising."
+      description: "As the Marketing Head, I designed and launched digital campaigns that powered the success of ISTE's flagship events. My targeted marketing strategies — from Instagram reels to LinkedIn outreach — led to a 30% boost in student attendance and overall engagement. I also collaborated closely with the content and design teams to create compelling promotional materials, managed ad performance, and set the foundation for consistent branding across all channels."
     }
   ];
 

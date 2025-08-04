@@ -46,7 +46,7 @@ export default function ExperienceSection() {
                 Campus Collect
               </p>
               <p className="text-gray-300 leading-relaxed" data-testid="experience-description">
-                As a Software Developer Intern at CampusCollect, I reimagined the student profile experience using React Native and Firebase. I engineered a modular interface that enabled 1,000+ users to experience real-time updates, asynchronous personalization, and snappy navigation — doubling load speeds and reducing code clutter by 35%.
+                At CampusCollect, I was tasked with reinventing the student profile experience. I developed a fully dynamic, Firebase-powered React Native interface that served over 1,000 active users. The platform allowed students to update and interact with personalized data in real time, while ensuring a seamless, modern UI. I modularized major components, reducing code redundancy by 35%, and significantly improved load speeds by optimizing data calls and component render cycles.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (

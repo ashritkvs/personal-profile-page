@@ -11,8 +11,8 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" data-testid="hero-section">
-      <div className="absolute inset-0 spotify-gradient opacity-20"></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden spotify-wrapped-bg" data-testid="hero-section">
+      <div className="absolute inset-0 spotify-gradient opacity-30"></div>
       
       {/* Animated background particles */}
       <div className="absolute inset-0">
@@ -45,7 +45,7 @@ export default function HeroSection() {
       
       <div className="text-center z-10 px-4 max-w-6xl mx-auto">
         <motion.h1 
-          className="text-6xl md:text-8xl font-black mb-4 gradient-text"
+          className="text-6xl md:text-8xl font-black mb-4 gradient-text spotify-pulse"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -71,7 +71,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           data-testid="hero-tagline"
         >
-          Engineering Ideas into Experiences – AI × Full Stack × Creative
+          Engineering Ideas into Experiences – AI × Full Stack × Data Science
         </motion.p>
         
         <motion.div 
@@ -85,7 +85,7 @@ export default function HeroSection() {
           </h2>
           <p className="text-gray-400 text-lg flex items-center justify-center gap-2" data-testid="hero-location">
             <MapPin className="w-5 h-5 text-[hsl(141,79%,40%)]" />
-            New York, USA – 11790
+            New York, USA – 11790 | ashritkvs@gmail.com
           </p>
         </motion.div>
         

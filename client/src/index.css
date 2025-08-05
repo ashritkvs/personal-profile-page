@@ -76,16 +76,29 @@
     background: linear-gradient(135deg, hsl(141, 79%, 40%) 0%, hsl(250, 68%, 65%) 50%, hsl(264, 83%, 70%) 100%);
   }
   
+  .spotify-wrapped-bg {
+    background: radial-gradient(ellipse at top, hsl(141, 79%, 15%) 0%, hsl(0, 0%, 6%) 40%, hsl(0, 0%, 3%) 100%);
+  }
+  
   .gradient-text {
     background: linear-gradient(45deg, hsl(141, 79%, 40%), hsl(250, 68%, 65%), hsl(45, 93%, 54%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradient-shift 3s ease-in-out infinite;
   }
   
   .imdb-card {
     aspect-ratio: 2/3;
-    background: linear-gradient(135deg, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 18%) 100%);
+    background: linear-gradient(135deg, hsl(0, 0%, 8%) 0%, hsl(0, 0%, 15%) 100%);
+    border: 1px solid hsl(45, 93%, 54%, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 0 1px hsl(45, 93%, 54%, 0.1);
+  }
+  
+  .imdb-poster-glow {
+    box-shadow: 0 0 20px hsl(45, 93%, 54%, 0.3), 
+                0 0 40px hsl(45, 93%, 54%, 0.1),
+                0 8px 32px rgba(0, 0, 0, 0.8);
   }
   
   .equalizer-bar {
@@ -104,7 +117,30 @@
     50% { height: 40px; }
   }
   
+  @keyframes gradient-shift {
+    0%, 100% { 
+      background: linear-gradient(45deg, hsl(141, 79%, 40%), hsl(250, 68%, 65%), hsl(45, 93%, 54%));
+    }
+    50% { 
+      background: linear-gradient(45deg, hsl(45, 93%, 54%), hsl(141, 79%, 40%), hsl(250, 68%, 65%));
+    }
+  }
+  
+  @keyframes spotify-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
+  
+  .spotify-pulse {
+    animation: spotify-pulse 2s ease-in-out infinite;
+  }
+  
   .section-transition {
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .movie-poster-shadow {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8)) 
+            drop-shadow(0 0 10px hsl(45, 93%, 54%, 0.2));
   }
 }

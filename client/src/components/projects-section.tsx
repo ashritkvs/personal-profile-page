@@ -78,7 +78,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-[hsl(0,0%,9%)]" data-testid="projects-section">
+    <section className="py-20 px-4 bg-gradient-to-b from-[hsl(0,0%,9%)] to-[hsl(0,0%,6%)]" data-testid="projects-section">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           className="text-center mb-16"

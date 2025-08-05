@@ -6,7 +6,7 @@ import Equalizer from "@/components/ui/equalizer";
 export default function FooterSection() {
   const contactInfo = [
     "ashritkvs@gmail.com",
-    "github.com/ashritkvs",
+    "github.com/ashritkvs", 
     "linkedin.com/in/ashritkommireddy",
   ];
 

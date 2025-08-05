@@ -33,8 +33,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
   return (
     <motion.div 
-      className="imdb-card rounded-2xl overflow-hidden border-2 border-gray-700 hover:border-[hsl(45,93%,54%)] transition-all duration-300 hover:transform hover:scale-105"
-      whileHover={{ y: -5 }}
+      className="imdb-card rounded-2xl overflow-hidden border-2 border-gray-700 hover:border-[hsl(45,93%,54%)] transition-all duration-300 hover:transform hover:scale-105 movie-poster-shadow"
+      whileHover={{ y: -5, boxShadow: "0 0 30px hsl(45, 93%, 54%, 0.4)" }}
       data-testid={`project-card-${index}`}
     >
       {/* Movie poster style background */}
@@ -79,19 +79,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
         
         <div className="mb-2">
-          <p className="text-xs text-gray-500 font-semibold mb-1">Tech Stack:</p>
+          <p className="text-xs text-[hsl(45,93%,54%)] font-semibold mb-1">Tech Stack:</p>
           <div className="flex flex-wrap gap-1">
             {project.technologies.slice(0, 4).map((tech, techIndex) => (
               <span 
                 key={techIndex}
-                className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded"
+                className="text-xs bg-gradient-to-r from-[hsl(141,79%,40%)] to-[hsl(250,68%,65%)] text-white px-2 py-1 rounded-full font-medium"
                 data-testid={`project-tech-${index}-${techIndex}`}
               >
                 {tech}
               </span>
             ))}
             {project.technologies.length > 4 && (
-              <span className="text-xs text-gray-500">+{project.technologies.length - 4}</span>
+              <span className="text-xs text-[hsl(45,93%,54%)]">+{project.technologies.length - 4}</span>
             )}
           </div>
         </div>
@@ -103,12 +103,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="flex gap-2">
           <Button 
             size="sm"
-            className="bg-[hsl(45,93%,54%)] text-black text-xs font-bold hover:bg-yellow-400"
+            className="bg-[hsl(45,93%,54%)] text-black text-xs font-bold hover:bg-yellow-400 imdb-poster-glow transition-all duration-300"
             onClick={() => window.open(project.githubUrl, '_blank')}
             data-testid={`project-github-${index}`}
           >
             <Github className="w-3 h-3 mr-1" />
-            GitHub
+            View Code
           </Button>
         </div>
       </div>

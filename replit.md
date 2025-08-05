@@ -7,6 +7,9 @@ This is a modern portfolio website built as a single-page application that showc
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Career focus: AI × Full Stack × Data Science (removed Creative)
+Email: ashritkvs@gmail.com 
+Contact preference: Include email in hero section and contact areas
 
 ## System Architecture
 
@@ -46,13 +49,14 @@ The project uses modern JavaScript tooling:
 - **Development Server**: Hot reload with error overlay for improved developer experience
 
 ### Styling and Design System
-The visual design implements a fusion of popular platforms:
+The visual design implements an authentic fusion of popular platforms:
 
-- **Design Language**: Spotify Wrapped aesthetics (vibrant gradients, smooth scrolling, storytelling elements)
-- **Project Presentation**: IMDb-style movie poster cards for project showcases
-- **Color Scheme**: Custom CSS variables for Spotify green, purple, and IMDb yellow
-- **Responsive Design**: Mobile-first approach with Tailwind breakpoints
-- **Interactive Elements**: Progress bars, animations, and hover effects for engagement
+- **Design Language**: Spotify Wrapped aesthetics (radial gradients, pulsing animations, gradient text shifts, storytelling elements)
+- **Project Presentation**: IMDb-style movie poster cards with golden glow effects, shadow treatments, and rating systems
+- **Color Scheme**: Spotify green (#1DB954), purple (#A757DE), IMDb yellow (#F5C518) with gradient combinations
+- **Enhanced Animations**: Spotify pulse effects, gradient text shifting, movie poster glows, equalizer animations
+- **Interactive Elements**: Enhanced hover states, glow effects, smooth transitions, and cinematic styling
+- **Background Treatments**: Spotify Wrapped radial gradients, section transitions, and atmospheric effects
 
 ## External Dependencies
 

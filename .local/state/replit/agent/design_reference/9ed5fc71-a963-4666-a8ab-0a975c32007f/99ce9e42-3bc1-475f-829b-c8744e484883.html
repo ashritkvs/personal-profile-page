@@ -1,0 +1,768 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashrit Wrapped: A Career Worth Streaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'spotify-green': '#1DB954',
+                        'spotify-dark': '#121212',
+                        'imdb-gold': '#F5C842',
+                        'neon-pink': '#E91E63',
+                        'deep-purple': '#9C27B0',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'equalizer': 'equalizer 1.5s infinite ease-in-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        equalizer: {
+                            '0%, 100%': { height: '10px' },
+                            '50%': { height: '30px' },
+                        },
+                        glow: {
+                            '0%': { 'box-shadow': '0 0 5px #1DB954, 0 0 10px #1DB954, 0 0 15px #1DB954' },
+                            '100%': { 'box-shadow': '0 0 10px #1DB954, 0 0 20px #1DB954, 0 0 30px #1DB954' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 25%, #2d1b69 50%, #1a1a1a 75%, #121212 100%);
+        }
+        .spotify-gradient {
+            background: linear-gradient(135deg, #1DB954 0%, #1ed760 50%, #1aa34a 100%);
+        }
+        .purple-gradient {
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+        }
+        .imdb-card {
+            background: linear-gradient(145deg, #1a1a1a 0%, #2a2a2a 100%);
+            border: 1px solid #333;
+        }
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px currentColor;
+        }
+        .equalizer-bar {
+            width: 4px;
+            background: linear-gradient(to top, #1DB954, #1ed760);
+            margin: 0 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-spotify-dark text-white font-inter overflow-x-hidden">
+    
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-spotify-dark/80 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-spotify-green">Ashrit.dev</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="hover:text-spotify-green transition-colors">Home</a>
+                    <a href="#experience" class="hover:text-spotify-green transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-spotify-green transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-spotify-green transition-colors">Skills</a>
+                    <a href="#contact" class="hover:text-spotify-green transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="hero" class="min-h-screen gradient-bg flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-deep-purple/20 via-transparent to-spotify-green/20"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="mb-8">
+                <h1 class="text-6xl md:text-8xl font-black mb-4 text-glow bg-gradient-to-r from-spotify-green via-neon-pink to-deep-purple bg-clip-text text-transparent">
+                    Ashrit Wrapped
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-2 text-gray-300">A Career Worth Streaming</p>
+                <p class="text-xl md:text-2xl font-medium text-spotify-green mb-8">Engineering Ideas into Experiences – AI × Full Stack × Creative</p>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" data-bind="user.name">Venkata Sai Ashrit Kommireddy</h2>
+                <p class="text-xl text-gray-400 mb-8">📍 New York, USA – 11790</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="bg-spotify-green hover:bg-green-600 text-black font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 animate-glow">
+                    <i class="fas fa-download mr-2"></i>View Resume
+                </a>
+                <a href="#" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="#" class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-spotify-green/10 rounded-full animate-pulse-slow"></div>
+        <div class="absolute bottom-20 right-10 w-24 h-24 bg-neon-pink/10 rounded-full animate-bounce-slow"></div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Education Section -->
+    <section id="education" class="py-20 bg-gradient-to-br from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 text-glow text-spotify-green">Academic Journey</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-gradient-to-r from-deep-purple/20 to-neon-pink/20 rounded-2xl p-8 border border-purple-500/30 card-hover">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">M.S in Data Science</h3>
+                            <p class="text-xl text-gray-300">Stony Brook University, New York</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <p class="text-lg text-spotify-green font-semibold">Aug 2024 – May 2026</p>
+                            <p class="text-lg font-bold text-imdb-gold">GPA: 3.66/4.0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-spotify-green/20 to-blue-500/20 rounded-2xl p-8 border border-green-500/30 card-hover">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">B.Tech in Computer Science</h3>
+                            <p class="text-xl text-gray-300">Ramrao Adik Institute of Technology, Mumbai</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <p class="text-lg text-spotify-green font-semibold">Jul 2020 – Jul 2024</p>
+                            <p class="text-lg font-bold text-imdb-gold">CGPA: 9.09/10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Education Section -->
+
+    <!-- @COMPONENT: Experience Section -->
+    <section id="experience" class="py-20 bg-gradient-to-br from-spotify-dark to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 text-glow text-neon-pink">Career Chronicles</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-spotify-green/30 card-hover">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-3xl font-bold text-white mb-2">Software Developer Intern</h3>
+                            <p class="text-xl text-spotify-green font-semibold">Campus Collect</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <p class="text-lg text-gray-400">May 2025 – Aug 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="prose prose-lg text-gray-300 max-w-none">
+                        <p class="text-lg leading-relaxed">
+                            As a Software Developer Intern at CampusCollect, I reimagined the student profile experience using <span class="text-spotify-green font-semibold">React Native and Firebase</span>. I engineered a modular interface that enabled <span class="text-imdb-gold font-bold">1,000+ users</span> to experience real-time updates, asynchronous personalization, and snappy navigation — <span class="text-neon-pink font-semibold">doubling load speeds</span> and reducing code clutter by <span class="text-neon-pink font-semibold">35%</span>.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-spotify-green/20 text-spotify-green rounded-full text-sm font-semibold">React Native</span>
+                        <span class="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold">Firebase</span>
+                        <span class="px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">Real-time Updates</span>
+                        <span class="px-4 py-2 bg-pink-500/20 text-pink-400 rounded-full text-sm font-semibold">Performance Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Experience Section -->
+
+    <!-- @COMPONENT: Projects Section (IMDb Style) -->
+    <section id="projects" class="py-20 bg-gradient-to-br from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 text-glow text-imdb-gold">Featured Productions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- @MAP: projects.map(project => ( -->
+                <!-- UniBot Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- Modern tech workspace with AI chatbot interface on screens -->
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="AI chatbot interface workspace" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">UniBot</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">9.2/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"AI-Powered Student Services Assistant"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">LangChain</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs">GPT-4</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">Pinecone</span>
+                                <span class="px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-xs">FastAPI</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">AI</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">NLP</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">RAG</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            UniBot wasn't just another chatbot — it was an AI assistant built for students, using cutting-edge LangChain + GPT-4. Achieved 92% retrieval accuracy serving 10K+ queries/week with lightning-fast responses.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VisionCare AI Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- Medical AI diagnostic screen showing retinal scans -->
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Medical AI diagnostic interface" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">VisionCare AI</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">9.3/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"Diabetic Retinopathy Detection"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-xs">PyTorch</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs">ResNet50</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">OpenCV</span>
+                                <span class="px-3 py-1 bg-red-600/20 text-red-400 rounded-full text-xs">Streamlit</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">Computer Vision</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">Healthcare</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">Deep Learning</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Achieved 93% F1 score in detecting early-stage diabetic retinopathy. Successfully deployed in 2 clinics, helping identify 50+ early-stage patients and potentially saving vision through early intervention.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TaskForge Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- Modern Kanban board interface with colorful task cards -->
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Kanban project management interface" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">TaskForge</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">8.8/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"Full-Stack Project Management Tool"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-xs">React</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">Node.js</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs">MongoDB</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">Docker</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">Full Stack</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">Productivity</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">Cloud</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Built a complete MERN stack project management platform with drag-and-drop Kanban functionality. Successfully managing 1,000+ tasks with seamless AWS EC2 deployment and Docker containerization.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StreamPulse Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- Live video streaming setup with multiple screens showing video calls -->
+                    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Video streaming and conferencing setup" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">StreamPulse</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">8.9/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"Live Video Chat App with AI Overlay"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-full text-xs">React</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">WebRTC</span>
+                                <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-full text-xs">TensorFlow.js</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">Socket.io</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">Real-time</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">Computer Vision</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">WebRTC</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Revolutionary video chat platform featuring real-time object detection overlays and instant messaging. Achieved 30% reduction in connection drops through optimized WebRTC implementation.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BookingPulse Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- Hotel analytics dashboard with booking charts and cancellation predictions -->
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Hotel booking analytics dashboard" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">BookingPulse</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">8.7/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"Hotel Cancellation Predictor"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-xs">Python</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">XGBoost</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs">SHAP</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">Pandas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">Machine Learning</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">Analytics</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">Hospitality</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Developed intelligent cancellation prediction model with 83% accuracy. Successfully identified key churn drivers and implemented strategies that reduced cancellations by 12% across partner hotels.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ClickLens AI Project -->
+                <div class="imdb-card rounded-2xl overflow-hidden card-hover group">
+                    <!-- A/B testing analytics dashboard with colorful conversion charts -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="A/B testing analytics dashboard" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" data-mock-image="true">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-2xl font-bold text-white">ClickLens AI</h3>
+                            <div class="flex items-center text-imdb-gold">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="font-bold">8.6/10</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-lg text-gray-400 mb-4 italic">"A/B Testing & Web Analytics"</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">STARRING</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-yellow-600/20 text-yellow-400 rounded-full text-xs">Python</span>
+                                <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-xs">Pandas</span>
+                                <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-full text-xs">Scipy</span>
+                                <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">Plotly</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">GENRES</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-spotify-green/20 text-spotify-green rounded-full text-xs">Data Science</span>
+                                <span class="px-3 py-1 bg-neon-pink/20 text-neon-pink rounded-full text-xs">A/B Testing</span>
+                                <span class="px-3 py-1 bg-deep-purple/20 text-deep-purple rounded-full text-xs">Analytics</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-300 text-sm mb-6">
+                            Comprehensive web analytics platform analyzing 100K+ user sessions. Discovered peak conversion times and recommended 3 winning UI variants that significantly improved user engagement metrics.
+                        </p>
+                        
+                        <div class="flex gap-3">
+                            <a href="#" class="flex-1 bg-spotify-green hover:bg-green-600 text-black font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fab fa-github mr-2"></i>Code
+                            </a>
+                            <a href="#" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+                
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: Skills Section (Spotify Wrapped Style) -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-spotify-dark via-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 text-glow text-deep-purple">Tech Stack Wrapped</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Languages Section -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center mb-8 text-spotify-green">Most Streamed Languages</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 rounded-2xl p-6 border border-yellow-500/30">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold">Python</span>
+                                <span class="text-2xl font-black text-yellow-400">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-500 h-3 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl p-6 border border-blue-500/30">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold">JavaScript</span>
+                                <span class="text-2xl font-black text-blue-400">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-blue-400 to-blue-500 h-3 rounded-full skill-bar" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl p-6 border border-cyan-500/30">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xl font-bold">TypeScript</span>
+                                <span class="text-2xl font-black text-cyan-400">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-400 to-cyan-500 h-3 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks Section -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center mb-8 text-neon-pink">Top Frameworks & Tools</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 text-center border border-cyan-500/30">
+                            <div class="text-4xl font-black text-cyan-400 mb-2">React</div>
+                            <div class="text-xl text-gray-300">95%</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-6 text-center border border-orange-500/30">
+                            <div class="text-4xl font-black text-orange-400 mb-2">PyTorch</div>
+                            <div class="text-xl text-gray-300">88%</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 text-center border border-blue-500/30">
+                            <div class="text-4xl font-black text-blue-400 mb-2">Docker</div>
+                            <div class="text-xl text-gray-300">82%</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl p-6 text-center border border-green-500/30">
+                            <div class="text-4xl font-black text-green-400 mb-2">Node.js</div>
+                            <div class="text-xl text-gray-300">90%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold text-center mb-8 text-imdb-gold">Achievement Unlocked</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-gradient-to-br from-blue-600/20 to-blue-700/20 rounded-2xl p-6 text-center border border-blue-600/30 card-hover">
+                            <i class="fas fa-certificate text-4xl text-blue-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">IBM Data Analytics</h4>
+                            <p class="text-gray-400">Professional Certificate</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 rounded-2xl p-6 text-center border border-yellow-600/30 card-hover">
+                            <i class="fas fa-chart-bar text-4xl text-yellow-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">Microsoft Power BI</h4>
+                            <p class="text-gray-400">Data Visualization</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 text-center border border-red-600/30 card-hover">
+                            <i class="fas fa-graduation-cap text-4xl text-red-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">Harvard Business School</h4>
+                            <p class="text-gray-400">Business Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+
+    <!-- @COMPONENT: Wrapped Stats Section -->
+    <section class="py-20 bg-gradient-to-br from-deep-purple/30 via-spotify-dark to-neon-pink/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16 text-glow spotify-gradient bg-clip-text text-transparent">Your 2025 Wrapped</h2>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-gradient-to-br from-spotify-green/20 to-green-600/20 rounded-3xl p-8 text-center border border-spotify-green/30 card-hover">
+                    <div class="text-6xl font-black text-spotify-green mb-4">1,500+</div>
+                    <div class="text-xl font-semibold text-white mb-2">Hours Coded</div>
+                    <div class="text-gray-400">Endless debugging sessions</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-neon-pink/20 to-pink-600/20 rounded-3xl p-8 text-center border border-neon-pink/30 card-hover">
+                    <div class="text-6xl font-black text-neon-pink mb-4">100+</div>
+                    <div class="text-xl font-semibold text-white mb-2">GitHub Commits</div>
+                    <div class="text-gray-400">In 2025 so far</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-imdb-gold/20 to-yellow-600/20 rounded-3xl p-8 text-center border border-imdb-gold/30 card-hover">
+                    <div class="text-6xl font-black text-imdb-gold mb-4">7</div>
+                    <div class="text-xl font-semibold text-white mb-2">Major Projects</div>
+                    <div class="text-gray-400">Across AI, ML, Web & Analytics</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl p-8 text-center border border-blue-500/30 card-hover">
+                    <div class="text-6xl font-black text-blue-400 mb-4">1,000+</div>
+                    <div class="text-xl font-semibold text-white mb-2">Users Served</div>
+                    <div class="text-gray-400">Via CampusCollect</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-3xl p-8 text-center border border-purple-500/30 card-hover">
+                    <div class="text-6xl font-black text-purple-400 mb-4">June</div>
+                    <div class="text-xl font-semibold text-white mb-2">Peak Month</div>
+                    <div class="text-gray-400">Most productive coding period</div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-500/20 to-teal-600/20 rounded-3xl p-8 text-center border border-green-500/30 card-hover">
+                    <div class="text-4xl font-black text-green-400 mb-4">🎵 ☔</div>
+                    <div class="text-xl font-semibold text-white mb-2">Coding Soundtrack</div>
+                    <div class="text-gray-400">Chill Lofi + Rain</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Wrapped Stats Section -->
+
+    <!-- @COMPONENT: Footer (Spotify Album Ending Style) -->
+    <footer id="contact" class="py-20 bg-gradient-to-br from-black via-spotify-dark to-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-12">
+                <h2 class="text-5xl font-black mb-4 text-glow text-spotify-green">The Album Continues…</h2>
+                <p class="text-xl text-gray-400 mb-8">Ready to collaborate on the next hit?</p>
+                
+                <!-- Animated Equalizer Bars -->
+                <div class="flex justify-center items-end space-x-1 mb-8">
+                    <div class="equalizer-bar animate-equalizer" style="height: 20px; animation-delay: 0s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 30px; animation-delay: 0.1s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 15px; animation-delay: 0.2s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 25px; animation-delay: 0.3s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 35px; animation-delay: 0.4s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 20px; animation-delay: 0.5s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 30px; animation-delay: 0.6s;"></div>
+                    <div class="equalizer-bar animate-equalizer" style="height: 15px; animation-delay: 0.7s;"></div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:ashritkvs@gmail.com" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-envelope mr-2"></i>Email Me
+                </a>
+                <a href="#" class="bg-spotify-green hover:bg-green-600 text-black font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-download mr-2"></i>Download Resume
+                </a>
+                <a href="https://github.com/ashritkvs" class="bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-github mr-2"></i>View GitHub
+                </a>
+                <a href="https://linkedin.com/in/ashritkommireddy" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500">
+                    © 2025 Venkata Sai Ashrit Kommireddy. Crafted with 💚 and lots of ☕
+                </p>
+                <p class="text-sm text-gray-600 mt-2">
+                    Made with React vibes, Spotify aesthetics, and IMDb storytelling
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // TODO: Implement smooth scrolling navigation
+        // TODO: Add intersection observer for animation triggers
+        // TODO: Implement skill bar animations on scroll
+        
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Animate skill bars when they come into view
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            bar.style.width = bar.parentElement.dataset.width || bar.style.width;
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe skills section
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+
+            // Add dynamic equalizer heights
+            const equalizerBars = document.querySelectorAll('.equalizer-bar');
+            equalizerBars.forEach((bar, index) => {
+                setInterval(() => {
+                    const randomHeight = Math.random() * 30 + 10;
+                    bar.style.height = randomHeight + 'px';
+                }, 150 + (index * 50));
+            });
+        })();
+    </script>
+</body>
+</html>
